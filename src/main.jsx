@@ -9,11 +9,11 @@ import { AuthProvider } from "./common/supabase/config.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-    <HashRouter>
+    <BrowserRouter basename="/peluqueria-demo">
     <ContextProvider>
       <App />
       </ContextProvider>
-    </HashRouter>
+    </BrowserRouter>
     </AuthProvider>
   </StrictMode>,
 );
