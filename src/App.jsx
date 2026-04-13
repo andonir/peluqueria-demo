@@ -19,8 +19,7 @@ function App() {
       <Route path="/" element={<Navigate to="client" replace />} />
       <Route path="client" element={<Landing />}></Route>
       <Route path="client/profile" element={<Profile />}></Route>
-      <Route path="client/appointment" element={<h1>OK APPOINTMENT</h1>} />
-      {/* <Route path="/client/appointment" element={<Cita />}></Route> */}
+      <Route path="client/appointment" element={<Cita />}></Route>
       <Route path="*" element={<Navigate to="client" replace />} />
 
       {/* ADMIN */}
