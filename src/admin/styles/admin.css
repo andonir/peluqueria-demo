@@ -1,0 +1,347 @@
+.admin-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  gap: 80px;
+}
+
+.admin-login form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.admin-login form input {
+  border: none;
+  width: 80%;
+  transition: all 0.3s;
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 5px;
+}
+.admin-login form input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.admin-login form button {
+  padding: 10px;
+  border: none;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+.admin-login form button:hover {
+  cursor: pointer;
+  background-color: var(--tertiary-color);
+}
+
+/* admin */
+.admin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* header */
+
+.admin-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header h4 {
+  color: green;
+}
+/* admin top */
+.admin-top{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+
+/* Legend */
+.legend{
+}
+.legend-content {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+
+}
+
+.legend .legend-elem {
+  display: flex;
+  gap: 5px;
+}
+.legend .legend-elem span {
+  background-color: red;
+  width: 20px;
+}
+/* Log out */
+.admin .admin-log-out{
+  background-color: rgb(245, 122, 122);
+  padding: 10px;
+  transition: background-color .3s;
+  border: none;
+}
+.admin .admin-log-out:hover{
+  cursor: pointer;
+    background-color: rgb(224, 22, 22);
+
+}
+/* calendar */
+.calendar {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+}
+.calendar .calendar-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+.calendar-top .month {
+  width: 150px;
+  text-align: center;
+}
+.calendar .calendar-top .arrow-icon {
+  transition: color.3s;
+}
+.calendar .calendar-top .arrow-icon:hover {
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
+.calendar .calendar-top .year{
+position: absolute;
+left: 0;
+}
+.calendar-days {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 20px;
+  grid-auto-rows: 100px;
+  gap: 5px;
+}
+.calendar-days .week-day {
+  text-align: center;
+}
+.calendar-days .day {
+  font-size: 15px;
+  border: 1px solid black;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+  position: relative;
+  background-color: transparent;
+}
+.calendar-days .day .day-morning {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  transition: background-color 0.3s;
+}
+.calendar-days .day .day-afternoon {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 50px;
+  transition: background-color 0.3s;
+}
+.calendar-days .day .green,
+.legend .legend-elem .green {
+  background-color: #66bb6a;
+}
+.calendar-days .day .orange,
+.legend .legend-elem .orange {
+  background-color: #fbc02d;
+}
+.calendar-days .day .red,
+.legend .legend-elem .red {
+  background-color: #e53935;
+}
+.calendar-days .day p {
+  position: absolute;
+  margin: 5px;
+  z-index: 10;
+}
+.calendar-days .day:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+.calendar-days .day:hover .day-morning,
+.calendar-days .day:hover .day-afternoon {
+  background-color: transparent;
+}
+/* hours */
+.hours-menu {
+  background-color: rgb(231, 231, 231);
+  position: absolute;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+  z-index: 100;
+}
+.hours-menu .hours-top {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.hours-menu .hours-top h4 {
+  font-size: 15px;
+}
+
+.hours-menu .hours-top .exit-btn,
+.appointment-details .exit-btn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(245, 122, 122);
+  border: none;
+  transition: background-color 0.3s;
+  font-size: 15px;
+}
+.hours-menu .hours-top .exit-btn:hover,
+.appointment-details .exit-btn:hover {
+  cursor: pointer;
+  background-color: rgb(224, 22, 22);
+}
+.hours-menu .hours {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.hours-menu .hours .hour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 40%;
+  padding: 5px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.hours-menu .hours .hour:hover {
+  cursor: pointer;
+}
+.hours-menu .hours .hour .appointment-hour {
+  text-align: center;
+  width: 70px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.hours-menu .hours .hour .appointment-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.hours-menu .hours .hour .appointment-status .check-icon {
+  color: green;
+}
+.hours-menu .hours .appointment-user {
+  background-attachment: blue;
+}
+
+.hours-menu .hours .booked-hour {
+  background-color: rgb(182, 230, 182);
+}
+
+/* appointments */
+.calendar .appointment-details {
+  background-color: var(--tertiary-color);
+  position: absolute;
+  width: 80%;
+  padding: 20px 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 200;
+}
+.calendar .appointment-details .appointment-details-top {
+  position: relative;
+}
+.calendar .appointment-details .appointment-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.appointment-details .appointment-details-btns {
+  text-align: center;
+}
+.appointment-details .delete-appointment {
+  background-color: rgb(245, 122, 122);
+  padding: 10px;
+  transition: background-color 0.3s;
+  border: none;
+}
+.appointment-details .delete-appointment:hover {
+  cursor: pointer;
+  background-color: rgb(224, 22, 22);
+}
+.appointment-details form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  width: 200px;
+}
+.appointment-details form input {
+  border: none;
+}
+
+.appointment-details form input {
+  padding: 5px;
+  border: none;
+  width: 200px;
+
+  background-color: #fff;
+}
+.appointment-details form button {
+  padding: 5px;
+  width: 210px;
+
+  border: none;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+.appointment-details form input:focus {
+  outline: none;
+}
+.appointment-details form button:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}

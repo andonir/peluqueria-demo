@@ -1,0 +1,567 @@
+/* HEADER */
+header {
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 50px;
+}
+header h2 {
+  font-size: 30px;
+}
+header .bars-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+  transition: color .3s;
+}
+header .bars-icon:hover{
+  cursor: pointer;
+  color: var(--tertiary-color);
+}
+.header-hr {
+  background-color: black;
+  border: none;
+  height: 1px;
+}
+header nav {
+  display: none;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 70px;
+  z-index: 100;
+  left: 0;
+}
+header nav.show{
+  display: block;
+}
+header nav ul{
+  display: flex;
+  flex-direction: column;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li{
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid var(--main-color);
+}
+header nav ul li .link{
+  text-decoration: none;
+  color: var(--main-color);
+}
+header nav ul li .selected{
+  color: var(--tertiary-color);
+}
+
+/* LANDING */
+
+.hero {
+  width: 100%;
+  background-image: url("/img/portada.jpg");
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  color: var(--background-color);
+  position: relative;
+}
+
+.hero-container {
+  width: 70%;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  top: 15px;
+  position: relative;
+}
+.hero h1 {
+  font-size: 50px;
+}
+.hero h2 {
+  font-size: 20px;
+}
+.hero-a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: var(--background-color);
+  width: fit-content;
+  padding: 10px;
+  transition: all 0.3s;
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.hero-a:hover {
+  background-color: var(--secondary-color);
+  width: 180px;
+}
+
+
+
+/* CITA */
+.cita-main {
+  text-align: center;
+}
+
+.cita-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+/* PASOS */
+.pasos-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+}
+.pasos-container .linea-puntos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  position: relative;
+  color: var(--main-color);
+}
+.pasos-container:before {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 70%;
+  left: 50%;
+  top: 13px;
+  transform: translateX(-50%);
+  height: 2px;
+
+  position: absolute;
+  z-index: 0;
+}
+.pasos-container .paso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+.paso-selected .circulo {
+  background-color: var(--main-color) !important;
+  color: var(--background-color) !important;
+}
+
+.pasos-container .paso .circulo {
+  background-color: var(--secondary-color);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: transparent;
+  transition: all 0.3s;
+}
+.pasos-container .flecha {
+  transition: all 0.3s;
+}
+.pasos-container .flecha:hover {
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
+.cita-header hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 20px 0;
+}
+
+/* LOGIN REGISTER */
+
+/* LOGIN */
+.login-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.login-register form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.login-register form input {
+  border: none;
+  width: 80%;
+  transition: all 0.3s;
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 5px;
+}
+.login-register form input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.login-register form button {
+  padding: 10px;
+  border: none;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+.login-register form button:hover {
+  cursor: pointer;
+  background-color: var(--tertiary-color);
+}
+.login-register h4 {
+  font-weight: 300;
+}
+.login-register h4 button {
+  background-color: transparent;
+  border: none;
+  color: blue;
+  transition: all 0.3s;
+  font-weight: bold;
+  border-bottom: 1px solid blue;
+}
+.login-register h4 button:hover {
+  cursor: pointer;
+  color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
+}
+
+/* RESERVAR HORA */
+
+.calendario-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.calendario-container .flecha {
+  transition: all 0.3s;
+  font-size: 20px;
+}
+.calendario-container .flecha:hover {
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
+.calendario-dias {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+.calendario-container .tarjeta-dia {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--secondary-color);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 3px;
+  transition: all 0.3s;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.calendario-container .tarjeta-dia:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+.calendario-container .day-selected {
+  background-color: var(--secondary-color);
+}
+.tarjeta-dia .nombre-dia {
+  font-size: 13px;
+}
+.tarjeta-dia .numero-dia {
+  font-size: 20px;
+}
+.tarjeta-dia .nombre-mes {
+  font-size: 12px;
+}
+.cita-main .hours {
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.cita-main .hour {
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  border-radius: 3px;
+}
+.cita-main .hour:hover {
+  cursor: pointer;
+}
+.cita-main .hours .booked {
+  background-color: rgb(245, 122, 122);
+}
+.cita-main .hours .booked-by-me {
+  background-color: rgb(143, 245, 122);
+}
+.cita-main .hours .hour-selected {
+  background-color: var(--tertiary-color);
+}
+
+.next-button {
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  margin: 30px;
+  display: none;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 2px;
+}
+.next-button-active {
+  display: inline;
+}
+.next-button:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+/* CONFIRMAR CITA */
+.confirmar-cita h3 {
+  margin-bottom: 40px;
+}
+.confirmar-cita ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: fit-content;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.confirmar-cita ul li {
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirmar-cita ul li .user,
+.confirmar-cita ul li .date,
+.confirmar-cita ul li .edit {
+  font-size: 15px;
+  color: var(--main-color);
+}
+.confirmar-cita ul li .edit {
+  transition: color 0.3s;
+}
+.confirmar-cita ul li .edit:hover {
+  cursor: pointer;
+  color: var(--tertiary-color);
+}
+
+.confirmar-cita-btn {
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  margin: 30px;
+  transition: all 0.3s;
+  border: none;
+  border-radius: 2px;
+}
+.confirmar-cita-btn:hover {
+  cursor: pointer;
+  background-color: var(--tertiary-color);
+}
+
+
+/* PERFIL */
+.profile-container{
+  text-align: center;
+  margin-top: 40px;
+}
+.profile-data{
+  margin: 20px 0;
+  position: relative;
+}
+.profile-data ul{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  list-style: none;
+  gap: 20px;
+
+}
+
+.profile-data ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+.profile-data .edit-icon:hover{
+  cursor: pointer;
+}
+.profile-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+ .profile-buttons button{
+  padding: 10px;
+  transition: background-color .3s;
+  border: none;
+}
+.profile-buttons .log-out{
+  background-color: rgb(231, 231, 231);
+}
+.profile-buttons .log-out:hover{
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+.profile-buttons .delete-account{
+  background-color: rgb(245, 122, 122);
+  padding: 10px;
+  transition: background-color .3s;
+  border: none;
+}
+.profile-buttons .delete-account:hover{
+  cursor: pointer;
+    background-color: rgb(224, 22, 22);
+
+}
+
+.update-profile-menu{
+  background-color: rgb(231, 231, 231);
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0;
+  border-radius: 5px;
+  top: 50px;
+}
+.update-profile-menu h4{
+  margin-bottom: 20px;
+}
+.update-profile-menu .cancel{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(245, 122, 122);
+  border: none;
+  transition: background-color .3s;
+}
+.update-profile-menu .cancel:hover{
+  cursor: pointer;
+  background-color: rgb(224, 22, 22);
+}
+.update-profile-menu form{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.update-profile-menu form input{
+  padding: 5px;
+  border: none;
+  background-color: #fff;
+  
+}
+.update-profile-menu form button{
+   padding: 5px;
+  border: none;
+  background-color: #fff;
+  transition: background-color .3s;
+}
+.update-profile-menu form input:focus{
+  outline: none;
+}
+.update-profile-menu form button:hover{
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.appointments ul{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+.appointments ul .appointment{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+  width: 300px;
+  font-size: 14px;
+}
+ .appointment p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.appointments ul .appointment .appointment-status .check-icon{
+    color: green;
+}
+
+.appointments ul .appointment .appointment-status .edit-icon{
+    color: green;
+}
+.login-register-profile{
+  margin-top: 50px;
+}
+/* MEDIA QUERIES RESPONSIVE */
+
+@media only screen and (max-width: 900px) {
+  /* NAV */
+}
+
+
+/* ICONS */
+
+.edit-icon{
+  font-size: 15px;
+}
