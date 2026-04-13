@@ -8,7 +8,7 @@ import { AuthProvider } from "./common/supabase/config.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-    <BrowserRouter>
+    <BrowserRouter basename="/peluqueria-demo">
     <ContextProvider>
       <App />
       </ContextProvider>
