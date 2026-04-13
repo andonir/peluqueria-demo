@@ -19,7 +19,7 @@ const Header = () => {
               <Link to={"/client/profile"} className={location.pathname=='/profile'? 'link selected' : 'link'}>Perfil</Link>
             </li>
             <li>
-                <a href="./client/appointment" className={location.pathname=='/appointment'? 'link selected' : 'link'}target="_blank" rel="noopener noreferrer">Pedir cita</a>
+                <a href="/client/appointment" className={location.pathname=='/appointment'? 'link selected' : 'link'}target="_blank" rel="noopener noreferrer">Pedir cita</a>
             </li>
           </ul>
         </nav>
