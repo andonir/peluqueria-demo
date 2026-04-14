@@ -20,7 +20,7 @@ function App() {
       <Route path="client" element={<Landing />}></Route>
       <Route path="client/profile" element={<Profile />}></Route>
       <Route path="client/appointment" element={<Cita />}></Route>
-      <Route path="*" element={<Navigate to="client" replace />} />
+      <Route path="*" element={<Navigate to="/client" replace />} />
 
       {/* ADMIN */}
       <Route
@@ -33,7 +33,7 @@ function App() {
           ) : isAdmin ? (
             <Admin />
           ) : (
-            <Navigate to="admin/login" />
+            <Navigate to="/admin/login" />
           )
         }
       ></Route>
