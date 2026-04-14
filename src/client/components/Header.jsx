@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Header = () => {
     const [showNav, setShowNav] = useState(false)
     const location= useLocation();
-    
+      useEffect(()=>{console.log(location)},[location])
     return (
     <>
       <header>
@@ -13,13 +14,13 @@ const Header = () => {
         <nav className={showNav ? 'show' : ''}>
           <ul>
             <li>
-              <Link to={"/client"} className= {location.hash=='#/client'? 'link selected' : 'link'}>Inicio</Link>
+              <NavLink to={"/client"} end className={({isActive})=>isActive? 'link selected' : 'link'} >Inicio</NavLink>
             </li>
             <li>
-              <Link to={"/client/profile"} className={location.pathname=='#/client/profile'? 'link selected' : 'link'}>Perfil</Link>
+              <NavLink to={"/client/profile"} end className={({isActive})=>isActive? 'link selected' : 'link'}>Perfil</NavLink>
             </li>
             <li>
-                <a href="#/client/appointment" className={location.pathname=='#client/appointment'? 'link selected' : 'link'}target="_blank" rel="noopener noreferrer">Pedir cita</a>
+                <a href="#/client/appointment" className='link' target="_blank" rel="noopener noreferrer">Pedir cita</a>
             </li>
           </ul>
         </nav>
