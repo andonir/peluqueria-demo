@@ -222,6 +222,8 @@ header nav ul li .selected{
   transition: all 0.3s;
   border-bottom: 1px solid var(--secondary-color);
   padding-bottom: 5px;
+    font-size: 15px;
+
 }
 .login-register form input:focus {
   outline: none;
@@ -239,10 +241,16 @@ header nav ul li .selected{
   cursor: pointer;
   background-color: var(--tertiary-color);
 }
+.login-register .bottom{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 .login-register h4 {
   font-weight: 300;
+  
 }
-.login-register h4 button {
+.login-register .bottom button {
   background-color: transparent;
   border: none;
   color: blue;
@@ -250,7 +258,7 @@ header nav ul li .selected{
   font-weight: bold;
   border-bottom: 1px solid blue;
 }
-.login-register h4 button:hover {
+.login-register .bottom button:hover {
   cursor: pointer;
   color: var(--tertiary-color);
   border-color: var(--tertiary-color);
