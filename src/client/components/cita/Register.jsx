@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Context } from "../../../common/context/Context";
-import { register } from "../../../common/supabase/functions";
+import { register, getProfile } from "../../../common/supabase/functions";
 import { useAuth } from "../../../common/supabase/config";
 const Register = () => {
-  const { isRegisterActive, setIsRegisterActive, setCurrentStep } = useContext(Context);
+  const { isRegisterActive, setIsRegisterActive, setCurrentStep, setProfile } = useContext(Context);
     const {user} = useAuth();
   
   const handleSubmit = (e) => {
@@ -14,6 +14,7 @@ const Register = () => {
     const phone = e.target.phone.value;
     const password = e.target.password.value;
     register(name, surname, email, phone, password);
+    getProfile(user.id, setProfile)
     if (user) setCurrentStep(2);
 
   };
@@ -25,11 +26,11 @@ const Register = () => {
       {isRegisterActive && (
         <>
           <form id="register" onSubmit={(e) => handleSubmit(e)}>
-            <input type="text" name="name" placeholder="Nombre" />
-            <input type="text" name="surname" placeholder="Apellido" />
-            <input type="text" name="email" placeholder="Correo" />
-            <input type="tel" name="phone" placeholder="Teléfono" />
-            <input type="password" name="password" placeholder="Contraseña" />
+            <input type="text" name="name" placeholder="Nombre" required/>
+            <input type="text" name="surname" placeholder="Apellido" required/>
+            <input type="text" name="email" placeholder="Correo" required/>
+            <input type="tel" name="phone" placeholder="Teléfono" required/>
+            <input type="password" name="password" placeholder="Contraseña" required/>
             <button type="submit">Registrarse</button>
           </form>
           <div className="bottom">
