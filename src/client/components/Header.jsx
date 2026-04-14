@@ -13,13 +13,13 @@ const Header = () => {
         <nav className={showNav ? 'show' : ''}>
           <ul>
             <li>
-              <Link to={"/client"} className= {location.pathname=='/client'? 'link selected' : 'link'}>Inicio</Link>
+              <Link to={"/client"} className= {location.hash=='#/client'? 'link selected' : 'link'}>Inicio</Link>
             </li>
             <li>
-              <Link to={"/client/profile"} className={location.pathname=='/profile'? 'link selected' : 'link'}>Perfil</Link>
+              <Link to={"/client/profile"} className={location.pathname=='#/client/profile'? 'link selected' : 'link'}>Perfil</Link>
             </li>
             <li>
-                <a href="#/client/appointment" className={location.pathname=='/appointment'? 'link selected' : 'link'}target="_blank" rel="noopener noreferrer">Pedir cita</a>
+                <a href="#/client/appointment" className={location.pathname=='#client/appointment'? 'link selected' : 'link'}target="_blank" rel="noopener noreferrer">Pedir cita</a>
             </li>
           </ul>
         </nav>
