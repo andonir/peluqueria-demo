@@ -27,7 +27,7 @@ function App() {
         path="admin"
         element={
           !user ? (
-            <Navigate to="admin/login" />
+            <Navigate to="/admin/login" />
           ) : !isReady ? (
             <h3>Loading...</h3>
           ) : isAdmin ? (
