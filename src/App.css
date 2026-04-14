@@ -63,7 +63,7 @@ header nav ul li .selected{
 .hero {
   width: 100%;
   background-image: url("/img/portada.jpg");
-  height: 70vh;
+  height: 80vh;
   background-position: center;
   background-size: cover;
   color: var(--background-color);
@@ -564,4 +564,14 @@ header nav ul li .selected{
 
 .edit-icon{
   font-size: 15px;
+}
+
+
+/* Footer */
+
+footer{
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  justify-content: center;
+  padding: 38px;
 }

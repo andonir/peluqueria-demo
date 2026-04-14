@@ -8,7 +8,7 @@ const Hero = () => {
           <h1>PELUQUERÍA</h1>
           <h2>Cortes de pelo - barba - peinado</h2>
         </div>
-        <a href="/client/appointment" target="_blank" rel="noopener noreferrer" className="hero-a">PEDIR CITA</a>
+                <a href="#/client/appointment" className={"hero-a"}target="_blank" rel="noopener noreferrer">Pedir cita</a>
       </div>
     </div>
   );
