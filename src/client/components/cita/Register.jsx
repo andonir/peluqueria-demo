@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { Context } from "../../../common/context/Context";
 import { register } from "../../../common/supabase/functions";
+import { useAuth } from "../../../common/supabase/config";
 const Register = () => {
-  const { isRegisterActive, setIsRegisterActive } = useContext(Context);
+  const { isRegisterActive, setIsRegisterActive, setCurrentStep } = useContext(Context);
+    const {user} = useAuth();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -11,6 +14,8 @@ const Register = () => {
     const phone = e.target.phone.value;
     const password = e.target.password.value;
     register(name, surname, email, phone, password);
+    if (user) setCurrentStep(2);
+
   };
   const hideRegister = () => {
     setIsRegisterActive(false);

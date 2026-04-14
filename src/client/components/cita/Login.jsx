@@ -1,15 +1,17 @@
 import { Context } from "../../../common/context/Context";
 import { useContext } from "react";
 import { logIn } from "../../../common/supabase/functions";
+import { useAuth } from "../../../common/supabase/config";
 const LogIn = () => {
   const { isRegisterActive, setIsRegisterActive, setCurrentStep } =
     useContext(Context);
+  const {user} = useAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     logIn(email, password);
-    setCurrentStep(2);
+    if (user) setCurrentStep(2);
   };
   const showRegister = () => {
     setIsRegisterActive(true);
