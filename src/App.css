@@ -573,5 +573,5 @@ footer{
   background-color: rgb(231, 231, 231);
   display: flex;
   justify-content: center;
-  padding: 38px;
+  height: 15vh;
 }
