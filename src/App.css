@@ -573,5 +573,6 @@ footer{
   background-color: rgb(231, 231, 231);
   display: flex;
   justify-content: center;
-  height: 15vh;
+  height: 12vh;
+  align-items: center;
 }
